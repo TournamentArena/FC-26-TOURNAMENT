@@ -64,7 +64,20 @@ nav{
   display:none;
 }
 .nav-right{display:flex;align-items:center;gap:12px;}
-.nav-right img{height:38px;}
+
+/* ─── SPONSOR BADGE ─── */
+.nav-sponsor{
+  display:flex;align-items:center;gap:9px;
+  background:rgba(198,255,0,0.04);
+  border:1px solid rgba(198,255,0,0.14);
+  border-radius:10px;padding:5px 12px 5px 10px;
+}
+.nav-sponsor-label{
+  font-family:'Barlow Condensed';font-size:9px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--dim);white-space:nowrap;line-height:1.3;
+  text-align:right;
+}
+.nav-right img{height:56px;}
 
 /* ─── HAMBURGER BUTTON ─── */
 .hamburger-btn{
@@ -627,6 +640,9 @@ footer{background:#000;border-top:1px solid rgba(198,255,0,0.06);padding:28px 16
   .stat-sep{display:none;}
   .sol-flow-bar{flex-direction:column;gap:10px;}
   .sol-flow-sep{transform:rotate(90deg);}
+  /* Sponsor label smaller on mobile */
+  .nav-sponsor-label{display:none;}
+  .nav-right img{height:46px;}
 }
 @media(min-width:561px){.hero-players-mob{display:contents;}}
 </style>
@@ -677,15 +693,18 @@ footer{background:#000;border-top:1px solid rgba(198,255,0,0.06);padding:28px 16
     <img src="fc2555.png" alt="FC26" onerror="this.style.display='none'">
   </div>
 
-  <!-- Hamburger button in center-right -->
   <button class="hamburger-btn" id="hamburger-btn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
     <span class="ham-line"></span>
     <span class="ham-line"></span>
     <span class="ham-line"></span>
   </button>
 
+  <!-- ✅ SPONSOR BADGE — 10.png kbira + "SPONSORISÉ PAR" -->
   <div class="nav-right">
-    <img src="PS5.png" alt="PS5" onerror="this.style.display='none'">
+    <div class="nav-sponsor">
+      <span class="nav-sponsor-label">SPONSORISÉ PAR<br></span>
+      <img src="10.png" alt="Sponsor" onerror="this.style.display='none'">
+    </div>
   </div>
 </nav>
 
@@ -900,9 +919,7 @@ footer{background:#000;border-top:1px solid rgba(198,255,0,0.06);padding:28px 16
         <img src="PS5.png" alt="PS5" onerror="this.style.display='none'">
         <img src="RIFT.png" alt="RIFT" onerror="this.style.display='none'">
         <img src="EA_Sports_FC_logo.svg.png" alt="EA Sports FC" onerror="this.style.display='none'">
-          <img src="10.png" alt="EA Sports FC" onerror="this.style.display='none'">
-
-        
+        <img src="10.png" alt="Sponsor" onerror="this.style.display='none'">
       </div>
       <div class="footer-bottom">
         <span class="copyright">© 2025 EA SPORTS FC26 TOURNAMENT · TOUS DROITS RÉSERVÉS</span>
@@ -967,7 +984,7 @@ footer{background:#000;border-top:1px solid rgba(198,255,0,0.06);padding:28px 16
       <div class="rule-num">3</div>
       <div class="rule-content">
         <div class="rule-title">Durée des Matchs</div>
-        <div class="rule-text"><strong>6 minutes</strong> par mi-temps pour chaque match.</div>
+        <div class="rule-text"><strong>4 minutes</strong> par mi-temps pour chaque match.</div>
       </div>
     </div>
     <div class="rule-card">
